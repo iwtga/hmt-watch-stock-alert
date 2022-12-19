@@ -1,3 +1,6 @@
+import schedule
+import time
+
 import urllib.request
 from datetime import datetime
 from dotenv import load_dotenv
@@ -59,4 +62,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    schedule.every(600).seconds.do(main)
+
+    while 1:
+        schedule.run_pending()
+        time.sleep(1)
