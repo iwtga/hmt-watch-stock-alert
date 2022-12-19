@@ -58,6 +58,7 @@ def main():
     else:
         log += "No watch seems to be available"
     logfile.write(str(datetime.now()) + " " + log + "\n")
+    log = " "
     logfile.close()
 
 
